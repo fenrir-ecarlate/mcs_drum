@@ -151,7 +151,7 @@ find_padding([]) ->
 
 find_padding([{_, Instrument, _}|TTracks]) ->
   case Instrument of
-    %% Check if the first character is in uppercase
+    %% Check that the first character is capitalized
     [First|_] when First >= $A, First =< $Z -> 2;
     _ -> find_padding(TTracks)
   end.
