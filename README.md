@@ -1,3 +1,3 @@
-Source, tests and samples for the course MCS Modern Concurrent Systems.
+Drum challenge en Erlang
 
-Marco Molteni, 2016.
+Partie manquante : alignement incorrect pour les 2 derniers tests
