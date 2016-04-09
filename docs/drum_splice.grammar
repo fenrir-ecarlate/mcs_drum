@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ufwb version="1.14">
+    <grammar name="SPLICE grammar" start="id:1" author="Marco Molteni" fileextension="splice">
+        <description>Grammar for SPLICE files</description>
+        <structure name="SPLICE file" id="1" encoding="ISO_8859-1:1987" endian="big" signed="no">
+            <string name="Magic" mustmatch="yes" id="2" strokecolor="FEFFFF" fillcolor="FF89D8" type="fixed-length" length="6" encoding="ANSI_X3.4-1968">
+                <fixedvalues>
+                    <fixedvalue name="magic" value="SPLICE"/>
+                </fixedvalues>
+            </string>
+            <number name="PayloadLength" id="4" strokecolor="FEFFFF" fillcolor="7980FF" type="integer" length="8" endian="big"/>
+            <string name="VersionString" id="5" strokecolor="FEFFFF" fillcolor="72FA78" type="fixed-length" length="32" encoding="ANSI_X3.4-1968"/>
+            <number name="Tempo" id="6" fillcolor="929000" type="float" length="4" endian="little"/>
+            <structure name="Track" id="7" repeatmax="-1">
+                <number name="TrackNumber" id="8" strokecolor="FEFFFF" fillcolor="FF9300" type="integer" length="4" endian="little"/>
+                <string name="Instrument" id="10" strokecolor="FEFFFF" fillcolor="FF7D78" type="pascal" length="actual" encoding="ANSI_X3.4-1968"/>
+                <structure name="Measure" id="11" length="16" fillcolor="FFD478"/>
+            </structure>
+        </structure>
+    </grammar>
+</ufwb>

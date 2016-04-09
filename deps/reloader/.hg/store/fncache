@@ -1,0 +1,6 @@
+data/src/reloader.app.src.i
+data/README.md.i
+data/.hgignore.i
+data/src/reloader.erl.i
+data/LICENSE.i
+data/rebar.config.i

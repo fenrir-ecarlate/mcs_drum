@@ -1,0 +1,13 @@
+{application, mcs,
+ [
+  {description, "Erlang source code for the MCS course"},
+  {vsn, "1"},
+  {modules, [
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
