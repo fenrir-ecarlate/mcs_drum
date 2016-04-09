@@ -46,6 +46,7 @@ decode_file(File) ->
 %% Internal
 %%=========================================
 -define(MAGIC, "SPLICE").
+-define(VERSION, "0.808-alpha").
 
 binary_to_string(Bin) ->
   lists:filter(fun(E) -> E =/= 0 end, binary_to_list(Bin)).
@@ -90,7 +91,7 @@ parse_measure(<<Quarter:4/binary, Rest/binary>>, Acc) ->
 
 render(Version, Tempo, Tracks) ->
   io_lib:format("Saved with HW Version: ~s~nTempo: ~s~n~s",
-    [Version,render_float(Tempo),render_tracks(Tracks, 0)]).
+    [Version,render_float(Tempo),render_tracks(Tracks, find_padding(Tracks))]).
 
 %%------------------
 
@@ -142,4 +143,15 @@ render_float(Float) ->
   case Float - trunc(Float) > 0 of
     true  -> float_to_list(Float, [{decimals,3},compact]);
     false -> float_to_list(Float, [{decimals,0}])
+  end.
+
+%-------------------
+find_padding([]) ->
+  0;
+
+find_padding([{_, Instrument, _}|TTracks]) ->
+  case Instrument of
+    %% Check if the first character is in uppercase
+    [First|_] when First >= $A, First =< $Z -> 2;
+    _ -> find_padding(TTracks)
   end.
