@@ -1,0 +1,75 @@
+%marge des pages
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{24cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\voffset}{-1.5cm}
+\setlength{\headheight}{15pt}
+
+% set la police en arial
+%% Sans-serif Arial-like fonts
+\renewcommand{\rmdefault}{phv} 
+\renewcommand{\sfdefault}{phv} 
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{xspace}
+\newcommand{\projectname}[0]{LTANR\xspace} 
+
+% configuration pour des listings
+\lstset{ 
+  showspaces=false,      
+  showstringspaces=false, 
+  showtabs=false,               
+  tabsize=3,                     
+  numbers=left
+}
+
+%enlève indentation en début de paragraphe
+\setlength\parindent{0pt}
+
+%style de l'en-tête de page
+\pagestyle{fancy}
+
+% style pour code en c
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinelanguage{VHDL}{
+      morekeywords=[1]{
+        library,use,all,entity,is,port,in,out,end,architecture,of,
+        begin,and,or,Not,downto,ALL
+      },
+      morekeywords=[2]{
+        STD_LOGIC_VECTOR,STD_LOGIC,IEEE,STD_LOGIC_1164,
+        NUMERIC_STD,STD_LOGIC_ARITH,STD_LOGIC_UNSIGNED,std_logic_vector,
+        std_logic
+      },
+      morecomment=[l]--
+    }
+    \usepackage[usenames,dvipsnames]{xcolor}
+    \colorlet{keyword}{blue!100!black!80}
+    \colorlet{STD}{Lavender}
+    \colorlet{comment}{green!80!black!90}
+    \lstdefinestyle{vhdl}{
+      language     = VHDL,
+      basicstyle   = \footnotesize \ttfamily,
+      keywordstyle = [1]\color{keyword}\bfseries,
+      keywordstyle = [2]\color{STD}\bfseries,
+      commentstyle = \color{comment}
+      breaklines=true,                % sets automatic line breaking
+      tabsize=3                                % sets default tabsize to 2 spaces
+    }
+
+\lstset{escapechar=@,style=customc}
+\lstset{inputencoding=utf8/latin1} %affiche les accents dans le listing
