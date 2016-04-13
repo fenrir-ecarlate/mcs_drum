@@ -38,7 +38,7 @@
 Loïc Haas\\
 Rick Wertenbroek}
 \title{Decode Network Trace et Drum Challenge \\ Laboratoire 1}
-\dest{Laboratoire 1}
+\dest{}
 
 % Informations necessaires a la page de garde
 % Commenter si probleme de compilation
@@ -120,7 +120,7 @@ Nous commençons par regarder si le magic word est juste sinon on revoie un tupl
 
 Si la matching est juste, on récupère la version du hardware, le tempo et les tracks via un pattern matching avec le payload puis on retourne tout ça avec un tuple.
 
-\subsection{Tracks}
+\subsubsection{Tracks}
 Pour parser les tracks, nous avons décomposé la procédure en 2 fonctions, une qui se charge de faire la base (récupérer l'identifiant et le nom) et une autre pour la décomposition de la mesure.\\
 
 Premièrement, la fonction pour le track complet:
