@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.12)  13 APR 2016 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.12)  13 APR 2016 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -834,36 +834,50 @@ File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+) [5]
+Overfull \hbox (121.70961pt too wide) in paragraph at lines 192--194
+\T1/phv/m/n/10 par-fois de la do-cu-men-ta-tion (par exemple dans le cas des bi
+-naires .pcap https ://-wiki.wireshark.org/Development/LibpcapFileFormat)
+ []
 
-(./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
-Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 2731B2AF52C536B19B40A4AE405BDEE8;536.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
+ (./rapport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+
+
+Package rerunfilecheck Warning: File `rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rapport.out':
+(rerunfilecheck)             Before: 2731B2AF52C536B19B40A4AE405BDEE8;536
+(rerunfilecheck)             After:  8864F37AA957D757E8B16E4281FAEF02;906.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 10762 strings out of 493089
- 150669 string characters out of 6134842
- 440979 words of memory out of 5000000
- 13887 multiletter control sequences out of 15000+600000
+ 10772 strings out of 493089
+ 150791 string characters out of 6134842
+ 440963 words of memory out of 5000000
+ 13889 multiletter control sequences out of 15000+600000
  45110 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,56p,469b,2338s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvr8a.pfb>
-Output written on rapport.pdf (6 pages, 224430 bytes).
+ 34i,12n,56p,802b,2338s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.1.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb>
+Output written on rapport.pdf (7 pages, 229151 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 127 named destinations out of 1000 (max. 500000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 135 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

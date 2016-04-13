@@ -175,4 +175,21 @@ On se charge juste de parser les valeurs afin de récupérer les informations n�
 
 \lstinputlisting[firstline=26, lastline=32,language=erlang]{sources/drum_sample.erl}
 
+\section{Decode Network Trace}
+\subsection{Introduction}
+Lors de ce laboratoire Decode Network Trace, il nous est demandé de créer une fonction erlang d'analyse de binaires .pcap. Il s'agit ici, à l'effigie de tshark (ou wireshark avec sa GUI) d'analyser un fichier .pcap et d'en sortir les différents paquets capturés.
+
+\subsection{Analyse}
+Il a fallu analyser déjà le comportement de tshark avec ces fichiers, on peut facilement lancer \texttt{tshark -r ping.pcap} afin de voir ce qu'il nous affiche, on a aussi utilisé l'option -V pour verbose. Première choses que nous avons fait est de prendre ces affichages et de les enregistrer dans des fichiers texte afin d'avoir une référence. Ensuite nous avons analyser le contenu en détail avec wireshark. Il est très utile pour cela car il permet de voir exactement quel partie du paquet binaire correspond à quelle information.
+
+\subsection{Test Driven Development}
+Au départ nous avons créé deux tests comparant la sortie du programme tshark avec la sortie de la fonction erlang, étant donné que cette fonction est le but final il s'agit ici juste d'une référence et du dernier test à passer. Mais nous avons pensé bien de déjà l'avoir. Ensuite nous avons essayé de découper les différentes tâches du problème et de penser à des fonctions qui pourraient être utiles. Par exemple afficher le protocole associé à une valeur entière. Quelques tests ont été implémentés et nous avons commencé à développer. Les autres tests apparaitront au cours du développement car il est difficile de penser à toutes les choses nécessaires à la résolution du problème. Surtout que le choix de l'implémentation est laissé libre.
+
+\subsection{Réalisation}
+La fonction \texttt{tshark\_from\_file} a été implémentée afin de créer un affichage à la tshark. La version verbeuse (-V) est très longue à implémenter et nous avons décidé de ne par l'implémenter car trop longue, le test final est déjà présent mais il n'est pas encore passé. Réaliser les fonctions qui étaient déjà testées facilitait pas mal l'implémentation et le TDD nous a aidé. Cependant des choses plus complexes étaient dur à tester à l'avance. Une meilleure découpe du problème aurait du être fait (analyse plus fine) avant de commencer la programmation.
+
+\section{Conclusion}
+L'analyse de fichiers binaires revient à trouver l'organisation des information à l'intérieur de ceux-ci, il y a parfois de la documentation (par exemple dans le cas des binaires .pcap https://wiki.wireshark.org/Development/LibpcapFileFormat) 	et parfois nous devons faire le reverse engineering nous même, comme dans le cas du drum challenge.
+Le fait d'avoir déjà des tests donnés nous a aidé dans le développement. Utiliser un langage fonctionnel pour réaliser ces laboratoires a été intéressant pour nous, parfois on voit directement ce qu'il faut faire et comment l'implémenter, parfois on est perdu. Dans tous les cas nous commençons à mieux savoir comment utiliser ce nouvel outil, et il y a sûrement encore des choses qu'on a fait totalement à l'envers mais au fur à mesure nous deviendrons performant ! Il est un peu dommage que ce laboratoire demande tellement de temps dans l'analyse de format binaires plutôt que dans l'implémentation d'algorithmes intéressants et à des problèmes auxquelles ce langage particulier nous permettrait d'arriver à une solution innovante.
+
 \end{document}
